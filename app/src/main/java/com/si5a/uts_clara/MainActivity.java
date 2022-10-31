@@ -60,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (cb_konfir.isChecked()) {
-                    Toast.makeText(MainActivity.this, "Checkbox is Checked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Terkonfirmasi", Toast.LENGTH_SHORT).show();
                 } else if (!cb_konfir.isChecked()){
-                    Toast.makeText(MainActivity.this, "Checkbox is not Checked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Silahkan centang", Toast.LENGTH_SHORT).show();
                 }
             }
         });
