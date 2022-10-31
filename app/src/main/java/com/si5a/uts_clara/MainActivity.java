@@ -46,7 +46,18 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if (Nomorpendaftaran.trim().equals("")){
                     et_nomor.setError("Nomor Pendaftaran Tidak boleh kosong");
-                } else{
+                }
+
+                else  if (!cb_konfir.isChecked()){
+                    Toast.makeText(MainActivity.this, "Silahkan centang konfirmasi", Toast.LENGTH_SHORT).show();
+                }
+
+                else if(Jalurpendaftaran.trim().equals("Jalur Pendaftaran")){
+                    Toast.makeText(MainActivity.this, "Silahkan pilih jalur pendaftaran", Toast.LENGTH_SHORT).show();
+                }
+
+
+                else{
                     Intent kirim = new Intent(MainActivity.this, ConfrimSent.class);
                     kirim.putExtra("VarNamaPendaftaran", String.valueOf(Namalengkap));
                     kirim.putExtra("VarNomorPendaftaran", String.valueOf(Nomorpendaftaran));
@@ -60,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (cb_konfir.isChecked()) {
-                    Toast.makeText(MainActivity.this, "Terkonfirmasi", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Konfirmasi", Toast.LENGTH_SHORT).show();
                 } else if (!cb_konfir.isChecked()){
-                    Toast.makeText(MainActivity.this, "Silahkan centang", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Silahkan centang konfirmasi", Toast.LENGTH_SHORT).show();
                 }
             }
         });
