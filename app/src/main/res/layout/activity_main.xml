@@ -26,6 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nama Lengkap"
+        android:layout_marginBottom="20dp"
         android:inputType="text"
         android:layout_below="@id/tv_judul"/>
 
@@ -34,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nomor Pendaftaran"
+        android:layout_marginBottom="20dp"
         android:inputType="number"
         android:layout_below="@id/et_nama"/>
 
@@ -42,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/et_nomor"
-        android:entries="@array/arr_jalurpendaftaran"/>
+        android:entries="@array/JalurPendaftaran_arr"/>
 
     <CheckBox android:id="@+id/cb_konfir"
         android:layout_width="wrap_content"
